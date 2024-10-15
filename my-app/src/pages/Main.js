@@ -1,23 +1,50 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'; // React와 useState를 import
 
 const Main = (props) => {
-	return (
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        // 여기에서 검색어에 대한 로직을 추가합니다.
+        console.log("Searching for:", searchTerm);
+    };
+
+    return (
 		<>
-			<h3>안녕하세요. 메인페이지 입니다.</h3>
-			<ul>
-				<Link to="/Main/DataAnalysis">
-                    <li>데이터 분석</li>
-                </Link>
-				<Link to="/Main/NaverNews">
-                    <li>네이버 뉴스</li>
-                </Link>
-                <Link to="/Main/KIS">
-                    <li>한국 투자 증권</li>
-                </Link>
-			</ul>
+        <div className="main-container">
+            <form onSubmit={handleSearch} className="search-form">
+                <input 
+                    type="text" 
+                    value={searchTerm} 
+                    onChange={(e) => setSearchTerm(e.target.value)} 
+                    placeholder="검색어를 입력하세요" 
+                    className="search-input"
+                />
+                <button type="submit" className="search-button">검색</button>
+            </form>
+        </div>
+		<div className='body-from'>
+			<div className='sub-title'>
+				메뉴
+			</div>
+			<div className='data-container'>
+				<div className="rectangle"></div>
+				<div className="rectangle"></div>
+			</div>
+			<div className='data-container'>
+				<div className="rectangle"></div>
+				<div className="rectangle"></div>
+			</div>
+			<div className='sub-title'>
+				중시 동향
+			</div>
+			<div className='data-container'>
+				<div className="rectangle"></div>
+				<div className="rectangle"></div>
+			</div>
+		</div>
 		</>
-	);
+    );
 };
 
 export default Main;

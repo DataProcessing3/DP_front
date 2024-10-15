@@ -5,19 +5,26 @@ import KIS from './pages/KIS';
 import NaverNews from './pages/NaverNews';
 import Main from './pages/Main';
 import Header from './pages/Header';
+import Bottom from './pages/Bottom';
 
 const App = () => {
 	return (
-		<div className='App'>
-      <BrowserRouter>
-      <Header/>
-				<Routes>
-					<Route path="/" element={<Main />}></Route>
-					<Route path="/Main/DataAnalysis" element={<DataAnalysis />}></Route>
-          <Route path="/Main/NaverNews" element={<NaverNews />}></Route>
-					<Route path="/Main/KIS" element={<KIS />}></Route>
-				</Routes>
-			</BrowserRouter>
+		<div className='app-container'>
+		<div>
+    	<BrowserRouter>
+    	<Header>
+		</Header>
+		<div className='container-box'>
+			<Routes>
+				<Route path="/" element={<Main />}></Route>
+				<Route path="/DataAnalysis" element={<DataAnalysis />}></Route>
+        		<Route path="/NaverNews" element={<NaverNews />}></Route>
+				<Route path="/KIS" element={<KIS />}></Route>
+			</Routes>
+		</div>
+		<Bottom />
+		</BrowserRouter>
+		</div>
 		</div>
 	);
 }
