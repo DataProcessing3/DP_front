@@ -1,11 +1,16 @@
 import React from 'react';
 
 function Recommand(props) {
-    return (
+	return (
 		<>
-			<div>
+		<div className='body-form'>
+			<div className='sub-title'>
+				추천
+			</div>
+			<div className='data-container'>
 				
 			</div>
+		</div>
 		</>
     );
 }
