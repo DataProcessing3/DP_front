@@ -28,12 +28,20 @@ const Main = (props) => {
 				메뉴
 			</div>
 			<div className='data-container'>
-				<div className="rectangle"></div>
-				<div className="rectangle"></div>
+				<div class="rectangle">
+					<img src="/img/analy.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
+					</div>
+				<div class="rectangle">
+					<img src="/img/info.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
+					</div>
 			</div>
 			<div className='data-container'>
-				<div className="rectangle"></div>
-				<div className="rectangle"></div>
+				<div class="rectangle">
+					<img src="/img/news.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
+					</div>
+				<div class="rectangle">
+					<img src="/img/rec.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
+					</div>
 			</div>
 			<div className='sub-title'>
 				중시 동향
