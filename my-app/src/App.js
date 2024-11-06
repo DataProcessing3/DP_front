@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
+import axios from "axios";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DataAnalysis from './pages/DataAnalysis';
 import Information from './pages/KIS';
