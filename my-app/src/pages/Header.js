@@ -17,13 +17,16 @@ function Header(props) {
                         <span>홈</span>
                     </NavLink>
                     <NavLink to="/DataAnalysis" activeClassName='active'>
-                        <span>데이터 분석</span>
+                        <span>분석</span>
+                    </NavLink>
+                    <NavLink to="/Information" activeClassName='active'>
+                        <span>정보</span>
                     </NavLink>
                     <NavLink to="/NaverNews" activeClassName='active'>
-                        <span>네이버 뉴스</span>
+                        <span>뉴스</span>
                     </NavLink>
-                    <NavLink to="/KIS" activeClassName='active'>
-                        <span>한국 투자 증권</span>
+                    <NavLink to="/Recommand" activeClassName='active'>
+                        <span>추천</span>
                     </NavLink>
                 </div>
             </div>

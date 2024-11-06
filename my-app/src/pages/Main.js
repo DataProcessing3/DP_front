@@ -23,23 +23,23 @@ const Main = (props) => {
                 <button type="submit" className="search-button">검색</button>
             </form>
         </div>
-		<div className='body-from'>
+		<div className='body-form'>
 			<div className='sub-title'>
 				메뉴
 			</div>
 			<div className='data-container'>
-				<div class="rectangle">
+				<div className="rectangle">
 					<img src="/img/analy.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
 					</div>
-				<div class="rectangle">
+				<div className="rectangle">
 					<img src="/img/info.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
 					</div>
 			</div>
 			<div className='data-container'>
-				<div class="rectangle">
+				<div className="rectangle">
 					<img src="/img/news.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
 					</div>
-				<div class="rectangle">
+				<div className="rectangle">
 					<img src="/img/rec.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
 					</div>
 			</div>
