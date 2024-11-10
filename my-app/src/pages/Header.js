@@ -41,20 +41,7 @@ function Header(props) {
                     </div>
                 </div>
             </div>
-            <div className='container-box'>
-            <div className="main-container">
-                <form onSubmit={handleSearch} className="search-form">
-                    <input
-                        type="text"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        placeholder="검색어를 입력하세요"
-                        className="search-input"
-                    />
-                    <button type="submit" className="search-button">검색</button>
-                </form>
-            </div>
-            </div>
+         
         </div>
     );
 }
