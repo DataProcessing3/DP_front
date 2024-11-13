@@ -5,7 +5,7 @@
   align-items: center; /* 세로 중앙 정렬 */
   width: 65%; /* 전체 너비의 80% */
   margin: 0 auto; /* 중앙 정렬을 위한 자동 여백 */
-  padding: 0 40px; /* 내부 여백 (선택 사항) */
+  padding: 40px; /* 내부 여백 (선택 사항) */
   box-sizing: border-box; /* 패딩을 포함한 총 너비 계산 */
   border-left: 1px solid rgb(207, 207, 207); /* 테두리 (선택 사항) */
   border-right: 1px solid rgb(207, 207, 207); /* 테두리 (선택 사항) */
@@ -36,8 +36,14 @@
   justify-content: space-between; /* 중앙 정렬 */
 }
 
+.data-container-news {
+  display: flex; /* 가로 정렬 */
+  width: 100%;
+  justify-content: space-between; /* 중앙 정렬 */
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -208,3 +214,52 @@
   justify-content: space-between; /* 중앙 정렬 */
 }
 
+.rectangle-news {
+  width: 900px; /* 부모 요소의 40% 크기 */
+  height: 500px; /* 고정된 높이 (예: 100px) */
+  aspect-ratio: 5/3;
+  margin-left: 50px;
+  background-color: #ffffff; /* 사각형 배경색 (하얀색) */
+  border-radius: 20px; /* 사각형 모서리 둥글게 */
+  flex-direction: column; /* 세로로 정렬 */
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 중앙 정렬 */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); /* 그림자 추가 */
+  display: flex; /* 가로 정렬 */
+  margin: 60px 60px 50px 0px; /* 상단 여백 */
+ 
+}
+.result-item {
+  padding: 2px;
+  width: 80%; /* 너비를 100%로 설정하여 부모 요소에 맞게 */
+  font-size: 28px;
+  color: rgb(91, 91, 91);
+}
+
+.section-title {
+  
+  color: rgb(91, 91, 91);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.small-text {
+  font-size: 14px; /* 작은 글자 크기로 설정 */
+  color: #666; /* 부드러운 색상 */
+}
+
+.item-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+.link-title {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: orange; /* 원하는 색상으로 변경 가능 */
+  text-decoration: none;
+}
