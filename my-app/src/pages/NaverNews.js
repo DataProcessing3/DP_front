@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import "../App.css";
 
 function NaverNews() {
   const [newsData, setNewsData] = useState([]);
@@ -38,9 +39,7 @@ function NaverNews() {
   }, []); // 빈 배열이므로 컴포넌트가 처음 마운트될 때만 실행
 
   return (
-    <div className="naver-news-container">
-      <h1>Naver News 페이지 입니다.</h1>
-
+    <div className="body-form">
       {/* 검색어 입력 폼 */}
       <div className="search-form">
         <input
@@ -55,62 +54,70 @@ function NaverNews() {
         </button>
       </div>
 
-      {loading ? (
-        <p>Loading...</p> // 로딩 중 표시
-      ) : (
-        <>
-          {/* 뉴스 파트 */}
-          {newsData.length > 0 && (
-            <div className="news-section">
-              <h2>뉴스</h2>
-              <ul>
-                {newsData.map((item, index) => (
-                  <li key={index}>
-                    <a href={item.link} target="_blank" rel="noopener noreferrer">
-                      {item.title}
-                    </a>
-                    <p>{item.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+      <div className="results-container">
+        {loading ? (
+          <p>Loading...</p> // 로딩 중 표시
+        ) : (
+          <>
+            {/* 뉴스 파트 */}
+            {newsData.length > 0 && (
+              <div className='data-container-news'>
+                <h2 className="section-title">뉴스</h2>
+                <ul className="rectangle-news" style={{ listStyleType: 'none' }}>
+                  {newsData.map((item, index) => (
+                    <li key={index} className="result-item">
+                      <div className="item-box">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="link-title">
+                          {item.title}
+                        </a>
+                        <p className="result-description small-text">{item.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          {/* 블로그 파트 */}
-          {blogData.length > 0 && (
-            <div className="blog-section">
-              <h2>블로그</h2>
-              <ul>
-                {blogData.map((item, index) => (
-                  <li key={index}>
-                    <a href={item.link} target="_blank" rel="noopener noreferrer">
-                      {item.title}
-                    </a>
-                    <p>{item.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+            {/* 블로그 파트 */}
+            {blogData.length > 0 && (
+              <div className='data-container-news'>
+                <h2 className="section-title">블로그</h2>
+                <ul className="rectangle-news" style={{ listStyleType: 'none' }}>
+                  {blogData.map((item, index) => (
+                    <li key={index} className="result-item">
+                      <div className="item-box">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="link-title">
+                          {item.title}
+                        </a>
+                        <p className="result-description small-text">{item.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
-          {/* 카페 파트 */}
-          {cafeData.length > 0 && (
-            <div className="cafe-section">
-              <h2>카페</h2>
-              <ul>
-                {cafeData.map((item, index) => (
-                  <li key={index}>
-                    <a href={item.link} target="_blank" rel="noopener noreferrer">
-                      {item.title}
-                    </a>
-                    <p>{item.description}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </>
-      )}
+            {/* 카페 파트 */}
+            {cafeData.length > 0 && (
+              <div className='data-container-news'>
+                <h2 className="section-title">카페</h2>
+                <ul className="rectangle-news" style={{ listStyleType: 'none' }}>
+                  {cafeData.map((item, index) => (
+                    <li key={index} className="result-item">
+                      <div className="item-box">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="link-title">
+                          {item.title}
+                        </a>
+                        <p className="result-description small-text">{item.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 }

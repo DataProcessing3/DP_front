@@ -1,7 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import axios from "axios";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import DataAnalysis from './pages/DataAnalysis';
 import Information from './pages/KIS';
 import Recommand from './pages/Recommand';
 import NaverNews from './pages/NaverNews';
@@ -18,10 +17,9 @@ const App = () => {
 					<div className='container-box'>
 						<Routes>
 							<Route path="/" element={<Main />}></Route>
-							<Route path="/DataAnalysis" element={<DataAnalysis />}></Route>
+							<Route path="/Recommand" element={<Recommand />}></Route>
 							<Route path="/Information" element={<Information />}></Route>
 							<Route path="/NaverNews" element={<NaverNews />}></Route>
-							<Route path="/Recommand" element={<Recommand />}></Route>
 						</Routes>
 					</div>
 					<Bottom />

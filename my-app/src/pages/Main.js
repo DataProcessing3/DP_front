@@ -12,7 +12,7 @@ const Main = (props) => {
 					메뉴
 				</div>
 				<div className='data-container'>
-					<Link to="/DataAnalysis" className="rectangle" style={{ textDecoration: 'none' }}>
+					<Link to="/Recommand" className="rectangle" style={{ textDecoration: 'none' }}>
 						<img src="/img/analy.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
 						<p>분석</p>
 					</Link>
@@ -26,9 +26,9 @@ const Main = (props) => {
 						<img src="/img/news.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
 						<p>뉴스</p>
 					</Link>
-					<Link to="/Recommand" className="rectangle" style={{ textDecoration: 'none' }}>
+					<Link to="/DataAnalysis" className="rectangle" style={{ textDecoration: 'none' }}>
 						<img src="/img/rec.png" alt="Your Image" style={{ maxWidth: '40%', maxHeight: '40%', objectFit: 'contain' }} />
-						<p>추천</p>
+						<p>개발중...</p>
 					</Link>
 				</div>
 				<div className='sub-title'>

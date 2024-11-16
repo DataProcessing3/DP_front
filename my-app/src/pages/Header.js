@@ -26,7 +26,7 @@ function Header(props) {
                         <NavLink to="/" activeClassName='active'>
                             <span>홈</span>
                         </NavLink>
-                        <NavLink to="/DataAnalysis" activeClassName='active'>
+                        <NavLink to="/Recommand" activeClassName='active'>
                             <span>분석</span>
                         </NavLink>
                         <NavLink to="/Information" activeClassName='active'>
@@ -35,8 +35,8 @@ function Header(props) {
                         <NavLink to="/NaverNews" activeClassName='active'>
                             <span>뉴스</span>
                         </NavLink>
-                        <NavLink to="/Recommand" activeClassName='active'>
-                            <span>추천</span>
+                        <NavLink to="/DataAnalysis" activeClassName='active'>
+                            <span>개발중...</span>
                         </NavLink>
                     </div>
                 </div>
